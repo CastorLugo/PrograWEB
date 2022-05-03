@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Javis
+        </title>
+    </head>
+    <body>
+        <form method="post" name="form" onSubmit="return validar();" action="x.php">
+            Nombre:<input type="text" name="nombre">
+            <br/>
+            Edad:<input type="text" name="enviar">
+            <br/>
+            <input type="submit" value="enviar"/>
+        </form>
+        <script lenguage="javascript">
+
+            function validar() {
+                var msg = "mensaje";
+                if((document.form.nombre.value.length > 100) || (document.form.nombre.value.length<5))
+                {
+                    msg="Error";
+                }
+
+                if((document.form.edad.value > 99) || (document.form.edad.value <3))
+                {
+                    msg="Error"
+                }
+
+                if(msg == "Error")
+                {
+                    window.alert(msg);
+                    return false;
+                }
+                else
+                {
+                    alert("todo bien");
+                    return true
+                }
+            }
+        </script>
+    </body>
+</html>
